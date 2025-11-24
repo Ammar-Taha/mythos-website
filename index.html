@@ -11,9 +11,38 @@
     <title>Mythos</title>
   </head>
   <body>
-    <div id="app">
-      <h1>Test Text</h1>
-    </div>
+    <a href="#main" class="skip-link visually-hidden">Skip to main content</a>
+    <header class="topnav">
+      <h2 class="visually-hidden">Header</h2>
+      <div class="wrapper topnav__wrapper">
+        <a href="/" class="topnav__homelink">
+          <img
+            src="./src/assets/logo-mythos.svg"
+            class="topnav__logo"
+            width="128"
+            height="36"
+            alt="Mythos logo"
+          />
+        </a>
+        <nav>
+          <ul class="topnav__links">
+            <li class="topnav__item">
+              <a href="/" class="topnav__link">Features</a>
+            </li>
+            <li class="topnav__item">
+              <a href="/" class="topnav__link">Pricing</a>
+            </li>
+            <li class="topnav__item">
+              <a href="/" class="topnav__link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main"></main>
+    <footer>
+      <h2 class="visually-hidden">Footer</h2>
+    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

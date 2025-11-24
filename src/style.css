@@ -88,6 +88,10 @@
     --color-footer-link-hover: var(--c-magenta);
   }
 
+  html {
+    scrollbar-gutter: auto;
+  }
+
   body {
     font-family: "Source Sans 3", "Arial", "Helvetica", sans-serif;
     background-color: var(--color-main-bg);
@@ -109,11 +113,63 @@
   .wrapper {
     width: min(calc(100% - 48px), calc(1200 / 16 * 1rem));
     margin-inline: auto;
-    padding-block: 60px;
   }
 }
 
 @layer components {
+  .topnav {
+    background-color: var(--color-header-bg);
+
+    .topnav__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: calc(12 / 16 * 1rem);
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        padding-block: calc(20 / 16 * 1rem);
+      }
+    }
+
+    .topnav__homelink {
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .topnav__logo {
+      width: calc(70 / 16 * 1rem);
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        width: calc(128 / 16 * 1rem);
+      }
+    }
+
+    .topnav__links {
+      display: flex;
+      gap: calc(20 / 16 * 1rem);
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        gap: calc(40 / 16 * 1rem);
+      }
+    }
+
+    .topnav__item {
+    }
+
+    .topnav__link {
+      font-size: var(--font-size-topnav);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-text-light);
+
+      &:hover {
+        text-decoration: underline 2px;
+        text-underline-offset: 4px;
+      }
+    }
+  }
 }
 
 @layer utilities {
@@ -124,5 +180,14 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+
+    &.skip-link:focus {
+      left: 0;
+      width: auto;
+      height: auto;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid;
+    }
   }
 }
