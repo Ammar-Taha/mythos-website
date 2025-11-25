@@ -318,6 +318,32 @@
       }
     }
   }
+
+  /* Fullwidth Feature */
+  .fw-feature {
+    background-color: var(--color-fullwidth-bg);
+    color: var(--color-text-light);
+    text-align: center;
+
+    .fw-feature__wrapper {
+      display: grid;
+      justify-items: center;
+    }
+
+    .fw-feature__title {
+      margin-block-end: calc(20 / 16 * 1rem);
+    }
+
+    .fw-feature__description {
+      max-width: 70ch;
+      margin-block-end: calc(40 / 16 * 1rem);
+    }
+
+    .fw-feature__image {
+      width: 100%;
+      max-width: calc(792 / 16 * 1rem);
+    }
+  }
 }
 
 @layer utilities {
