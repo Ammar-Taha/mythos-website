@@ -447,12 +447,6 @@
       margin-block-end: 10px;
     }
 
-    .footer__copyright {
-    }
-
-    .footer__column {
-    }
-
     .footer__title {
       font-size: calc(22 / 16 * 1rem);
       margin-block-end: 6px;
@@ -461,9 +455,6 @@
     .footer__links {
       display: grid;
       gap: 6px;
-    }
-
-    .footer__item {
     }
 
     .footer__link {
